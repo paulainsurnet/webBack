@@ -1,0 +1,59 @@
+{
+  "name": "insurceo-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon --exec 'babel-node server.js'",
+    "win-start": "nodemon --exec babel-node server.js",
+    "pdf": "nodemon --exec babel-node pdf/exer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.joopbox.com/easydevel/insurceo-back.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "aws-sdk": "^2.784.0",
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.0",
+    "cors": "^2.8.5",
+    "derive-password-bytes": "0.0.2",
+    "dotenv": "^8.2.0",
+    "easy-pdf-merge": "^0.2.6",
+    "express": "^4.17.1",
+    "handlebars-pdf": "^1.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.2",
+    "node-xlsx": "^0.15.0",
+    "nodemailer": "^6.4.18",
+    "nodemon": "^2.0.6",
+    "rijndael-js": "^2.0.0",
+    "soap": "^0.37.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "eslint": "^7.21.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "!(iconfont)*.{js,jsx}": "eslint --cache --fix",
+    "!(iconfont)*.js": "eslint --cache --fix"
+  }
+}
